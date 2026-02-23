@@ -61,7 +61,6 @@ button.submit:hover{background:#4500b3;}
 <section id="formations">
 <h2>Nos Matières Crypto</h2>
 <div class="cards">
-
 <div class="card">
 <i class="fa-solid fa-bitcoin"></i>
 <h3>Introduction au Bitcoin</h3>
@@ -100,7 +99,6 @@ button.submit:hover{background:#4500b3;}
 <p><strong>Plan de trading :</strong> Objectifs, stop-loss, journalisation des trades.</p>
 </div>
 </div>
-
 </div>
 </section>
 
@@ -154,7 +152,7 @@ var element=document.getElementById(id);
 element.style.display=(element.style.display==="block")?"none":"block";
 }
 
-// Formulaire confirmation paiement + envoi PDF via EmailJS
+// Formulaire confirmation paiement
 document.getElementById("confirmationForm").addEventListener("submit", function(e){
 e.preventDefault();
 document.getElementById("confirmationMessage").innerHTML="Merci ! Vous recevrez le PDF premium et le certificat par email très bientôt.";
@@ -163,7 +161,7 @@ let nom=this.querySelector('input[type=text]').value;
 let email=this.querySelector('input[type=email]').value;
 let paiement=this.querySelector('textarea').value;
 
-// EmailJS exemple : envoyer PDF hébergé
+// Exemple EmailJS : envoyer PDF hébergé
 // emailjs.send("service_id","template_id",{name: nom,email: email,paiement: paiement,pdf_link:"https://cryptovision-rdc.netlify.app/premium.pdf"});
 this.reset();
 });
