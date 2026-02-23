@@ -1,169 +1,241 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cryptovision-RDC</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<!-- Font Awesome pour icônes -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-    /* ==== CSS Global ==== */
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif; }
-    body { background-color:#0d0d1a; color:#fff; scroll-behavior:smooth; }
-    a { text-decoration:none; color:inherit; }
+    <meta charset="UTF-8">
+    <title>Cryptovision-RDC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* ==== Header ==== */
-    header { background-color:rgba(10,10,30,0.95); padding:15px 0; position:fixed; width:100%; top:0; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.5); }
-    .container { width:90%; max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; }
-    header h1 { font-size:1.8rem; font-weight:700; color:#00f2ea; }
-    nav ul { list-style:none; display:flex; gap:25px; }
-    nav ul li a { color:#fff; font-weight:500; transition:0.3s; }
-    nav ul li a:hover { color:#00f2ea; }
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    /* Hamburger */
-    .hamburger { display:none; flex-direction:column; cursor:pointer; gap:5px; }
-    .hamburger div { width:25px; height:3px; background:#fff; transition:0.3s; }
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Roboto',sans-serif;
+        }
 
-    /* ==== Hero ==== */
-    section.hero { background:linear-gradient(135deg,#00f2ea,#6b00ff); text-align:center; padding:150px 20px 100px; position:relative; overflow:hidden; }
-    section.hero h2 { font-size:3rem; margin-bottom:20px; animation:fadeInDown 1.5s ease forwards; }
-    section.hero p { font-size:1.2rem; max-width:700px; margin:auto; animation:fadeInUp 1.5s ease forwards; }
-    @keyframes fadeInDown {0% {opacity:0; transform:translateY(-50px);}100% {opacity:1; transform:translateY(0);} }
-    @keyframes fadeInUp {0% {opacity:0; transform:translateY(50px);}100% {opacity:1; transform:translateY(0);} }
+        body{
+            background:#0d0d1a;
+            color:#fff;
+            scroll-behavior:smooth;
+        }
 
-    /* ==== Services ==== */
-    section.services { padding:100px 20px; text-align:center; }
-    section.services h2 { font-size:2.5rem; margin-bottom:50px; color:#00f2ea; }
-    .service-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
-    .card { background-color:#111133; padding:30px; width:300px; border-radius:15px; box-shadow:0 10px 20px rgba(0,0,0,0.5); transition: transform 0.4s, box-shadow 0.4s; text-align:center; }
-    .card:hover { transform:translateY(-15px); box-shadow:0 20px 30px rgba(0,0,0,0.7); }
-    .card i { font-size:2rem; color:#00f2ea; margin-bottom:15px; }
-    .card h3 { margin-bottom:15px; color:#00f2ea; }
-    .card p { font-size:1rem; line-height:1.6; color:#ccc; }
+        header{
+            background:rgba(10,10,30,0.95);
+            padding:15px 0;
+            position:fixed;
+            width:100%;
+            top:0;
+            z-index:100;
+            box-shadow:0 2px 10px rgba(0,0,0,0.5);
+        }
 
-   <section class="services" id="enseignements">
-    <h2>Enseignements</h2>
-    <div class="service-cards">
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
 
-        <div class="card">
-            <h3>Introduction à la Cybersécurité</h3>
-            <p>Comprendre les bases des réseaux, des menaces et des systèmes sécurisés.</p>
-        </div>
+        header h1{
+            color:#00f2ea;
+        }
 
-        <div class="card">
-            <h3>Analyse Crypto Avancée</h3>
-            <p>Apprenez à analyser les marchés et comprendre les tendances blockchain.</p>
-        </div>
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:20px;
+        }
 
-    </div>
-</section><li><a href="#premium">Premium</a></li><section class="services" id="premium">
-    <h2>Accès Premium</h2>
+        nav ul li a{
+            color:#fff;
+            font-weight:500;
+            transition:0.3s;
+        }
 
-    <div class="card" style="margin:auto;">
-        <h3>Formation Complète Cybersécurité</h3>
-        <p>Accédez à des contenus exclusifs, analyses privées et stratégies avancées.</p>
+        nav ul li a:hover{
+            color:#00f2ea;
+        }
 
-        <a href="#"
-        style="display:inline-block;
-        margin-top:20px;
-        padding:15px 30px;
-        background:#6b00ff;
-        border-radius:8px;">
-        Accéder au Premium (10$)
-        </a>
-    </div>
-</section><!-- Contact -->
-<section class="contact" id="contact">
-    <h2>Contactez-nous</h2>
+        section{
+            padding:100px 20px;
+            text-align:center;
+        }
 
-    <div style="margin-bottom:40px;">
-        <p>📞 Téléphone :
-            <a href="tel:+243972840969" style="color:#00f2ea;">
-                +243 972 840 969
-            </a>
-        </p>
+        .hero{
+            background:linear-gradient(135deg,#00f2ea,#6b00ff);
+            padding-top:150px;
+        }
 
-        <p>📧 Email :
-            <a href="mailto:Stevenwelle777@gmail.com" style="color:#00f2ea;">
-                Stevenwelle777@gmail.com
-            </a>
-        </p>
-    </div>
+        h2{
+            margin-bottom:40px;
+            color:#00f2ea;
+        }
 
-    <form>
-        <input type="text" placeholder="Votre nom" required>
-        <input type="email" placeholder="Votre email" required>
-        <textarea rows="5" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
-</section>
+        .cards{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:30px;
+        }
 
-    /* ==== Footer ==== */
-    footer { background-color:#000011; color:#aaa; text-align:center; padding:30px 20px; }
+        .card{
+            background:#111133;
+            padding:30px;
+            width:300px;
+            border-radius:15px;
+            box-shadow:0 10px 20px rgba(0,0,0,0.5);
+            transition:0.3s;
+        }
 
-    /* ==== Responsive ==== */
-    @media (max-width: 768px) {
-        nav ul { position: absolute; top:60px; right:0; background:#111133; flex-direction:column; width:200px; padding:20px; gap:15px; display:none; border-radius:8px; }
-        nav ul.show { display:flex; }
-        .hamburger { display:flex; }
-        .service-cards { flex-direction:column; align-items:center; }
-        header .container { flex-direction:row; justify-content:space-between; }
-    }
-</style>
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .contact{
+            background:#111133;
+        }
+
+        form{
+            max-width:500px;
+            margin:auto;
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+
+        input, textarea{
+            padding:15px;
+            border-radius:8px;
+            border:none;
+        }
+
+        button{
+            padding:15px;
+            background:#6b00ff;
+            border:none;
+            color:#fff;
+            font-weight:700;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#4500b3;
+        }
+
+        .premium-btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:15px 30px;
+            background:#6b00ff;
+            border-radius:8px;
+        }
+
+        footer{
+            background:#000011;
+            padding:30px;
+            color:#aaa;
+        }
+
+        @media(max-width:768px){
+            .cards{
+                flex-direction:column;
+                align-items:center;
+            }
+            .container{
+                flex-direction:column;
+                gap:10px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Header -->
 <header>
     <div class="container">
         <h1>Cryptovision-RDC</h1>
         <nav>
-            <div class="hamburger" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <ul id="nav-menu">
+            <ul>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#enseignements">Enseignements</a></li>
+                <li><a href="#premium">Premium</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- Hero -->
 <section class="hero" id="about">
     <h2>Bienvenue sur Cryptovision-RDC</h2>
     <p>Solutions sécurisées et analyses avancées pour la gestion des cryptomonnaies en République Démocratique du Congo.</p>
 </section>
 
-<!-- Services -->
-<section class="services" id="services">
+<section id="services">
     <h2>Nos Services</h2>
-    <div class="service-cards">
+    <div class="cards">
         <div class="card">
-            <i class="fa-solid fa-chart-line"></i>
             <h3>Analyse de marché</h3>
-            <p>Des rapports détaillés sur les tendances et prévisions du marché des cryptomonnaies.</p>
+            <p>Rapports détaillés sur les tendances et prévisions crypto.</p>
         </div>
         <div class="card">
-            <i class="fa-solid fa-shield-halved"></i>
             <h3>Sécurité Blockchain</h3>
-            <p>Assurez la protection complète de vos actifs numériques et transactions blockchain.</p>
+            <p>Protection complète de vos actifs numériques.</p>
         </div>
         <div class="card">
-            <i class="fa-solid fa-lightbulb"></i>
             <h3>Consultation personnalisée</h3>
-            <p>Nos experts vous accompagnent dans vos décisions stratégiques et investissements crypto.</p>
+            <p>Accompagnement stratégique en investissement crypto.</p>
         </div>
     </div>
 </section>
 
-<!-- Contact -->
+<section id="enseignements">
+    <h2>Enseignements</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Introduction à la Cybersécurité</h3>
+            <p>Comprendre les bases des réseaux et des menaces numériques.</p>
+        </div>
+        <div class="card">
+            <h3>Analyse Crypto Avancée</h3>
+            <p>Maîtrisez les tendances et stratégies blockchain.</p>
+        </div>
+    </div>
+</section>
+
+<section id="premium">
+    <h2>Accès Premium</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Formation Complète Cybersécurité</h3>
+            <p>Contenus exclusifs, stratégies avancées et analyses privées.</p>
+            <a href="#" class="premium-btn">Accéder au Premium (10$)</a>
+        </div>
+    </div>
+</section>
+
 <section class="contact" id="contact">
     <h2>Contactez-nous</h2>
+
+    <p>📞 Téléphone :
+        <a href="tel:+243972840969" style="color:#00f2ea;">
+            +243 972 840 969
+        </a>
+    </p>
+
+    <p>📧 Email :
+        <a href="mailto:Stevenwelle777@gmail.com" style="color:#00f2ea;">
+            Stevenwelle777@gmail.com
+        </a>
+    </p>
+
+    <br><br>
+
     <form>
         <input type="text" placeholder="Votre nom" required>
         <input type="email" placeholder="Votre email" required>
@@ -172,20 +244,9 @@
     </form>
 </section>
 
-<!-- Footer -->
 <footer>
-    &copy; 2026 Cryptovision-RDC. Tous droits réservés.
+    &copy; 2026 Cryptovision-RDC - Tous droits réservés.
 </footer>
-
-<!-- JS Hamburger -->
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-    });
-</script>
 
 </body>
 </html>
