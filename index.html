@@ -1,252 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Cryptovision-RDC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cryptovision-RDC | Formation Crypto</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+body{background:#0d0d1a;color:#fff;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Roboto',sans-serif;
-        }
+header{background:rgba(10,10,30,0.95);padding:15px 0;position:fixed;width:100%;top:0;z-index:100;}
+.container{width:90%;max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;}
+header h1{color:#00f2ea;}
+nav ul{list-style:none;display:flex;gap:20px;}
+nav ul li a:hover{color:#00f2ea;}
 
-        body{
-            background:#0d0d1a;
-            color:#fff;
-            scroll-behavior:smooth;
-        }
+section{padding:120px 20px;text-align:center;}
+.hero{background:linear-gradient(135deg,#00f2ea,#6b00ff);}
+h2{margin-bottom:40px;color:#00f2ea;}
 
-        header{
-            background:rgba(10,10,30,0.95);
-            padding:15px 0;
-            position:fixed;
-            width:100%;
-            top:0;
-            z-index:100;
-            box-shadow:0 2px 10px rgba(0,0,0,0.5);
-        }
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;}
+.card{background:#111133;padding:30px;width:320px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);}
+.card i{font-size:2rem;color:#00f2ea;margin-bottom:15px;}
+.card button{margin-top:15px;padding:10px 20px;border:none;background:#6b00ff;color:white;border-radius:6px;cursor:pointer;}
+.card button:hover{background:#4500b3;}
 
-        .container{
-            width:90%;
-            max-width:1200px;
-            margin:auto;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
-
-        header h1{
-            color:#00f2ea;
-        }
-
-        nav ul{
-            list-style:none;
-            display:flex;
-            gap:20px;
-        }
-
-        nav ul li a{
-            color:#fff;
-            font-weight:500;
-            transition:0.3s;
-        }
-
-        nav ul li a:hover{
-            color:#00f2ea;
-        }
-
-        section{
-            padding:100px 20px;
-            text-align:center;
-        }
-
-        .hero{
-            background:linear-gradient(135deg,#00f2ea,#6b00ff);
-            padding-top:150px;
-        }
-
-        h2{
-            margin-bottom:40px;
-            color:#00f2ea;
-        }
-
-        .cards{
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap:30px;
-        }
-
-        .card{
-            background:#111133;
-            padding:30px;
-            width:300px;
-            border-radius:15px;
-            box-shadow:0 10px 20px rgba(0,0,0,0.5);
-            transition:0.3s;
-        }
-
-        .card:hover{
-            transform:translateY(-10px);
-        }
-
-        .contact{
-            background:#111133;
-        }
-
-        form{
-            max-width:500px;
-            margin:auto;
-            display:flex;
-            flex-direction:column;
-            gap:20px;
-        }
-
-        input, textarea{
-            padding:15px;
-            border-radius:8px;
-            border:none;
-        }
-
-        button{
-            padding:15px;
-            background:#6b00ff;
-            border:none;
-            color:#fff;
-            font-weight:700;
-            cursor:pointer;
-            transition:0.3s;
-        }
-
-        button:hover{
-            background:#4500b3;
-        }
-
-        .premium-btn{
-            display:inline-block;
-            margin-top:20px;
-            padding:15px 30px;
-            background:#6b00ff;
-            border-radius:8px;
-        }
-
-        footer{
-            background:#000011;
-            padding:30px;
-            color:#aaa;
-        }
-
-        @media(max-width:768px){
-            .cards{
-                flex-direction:column;
-                align-items:center;
-            }
-            .container{
-                flex-direction:column;
-                gap:10px;
-            }
-        }
-    </style>
+.details{display:none;margin-top:15px;text-align:left;font-size:0.9rem;color:#ccc;}
+.premium{background:#111133;}
+.premium button{padding:15px 30px;background:#00f2ea;color:#000;border:none;border-radius:8px;font-weight:bold;cursor:pointer;margin:10px;}
+.contact{background:#111133;}
+footer{background:#000011;padding:30px;color:#aaa;}
+</style>
 </head>
-
 <body>
 
 <header>
-    <div class="container">
-        <h1>Cryptovision-RDC</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#enseignements">Enseignements</a></li>
-                <li><a href="#premium">Premium</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<div class="container">
+<h1>Cryptovision-RDC</h1>
+<nav>
+<ul>
+<li><a href="#about">À propos</a></li>
+<li><a href="#formations">Formations</a></li>
+<li><a href="#premium">Premium</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
 <section class="hero" id="about">
-    <h2>Bienvenue sur Cryptovision-RDC</h2>
-    <p>Solutions sécurisées et analyses avancées pour la gestion des cryptomonnaies en République Démocratique du Congo.</p>
+<h2>Formation Professionnelle en Cryptomonnaies</h2>
+<p>Apprenez à investir, analyser et comprendre le marché crypto en RDC.</p>
 </section>
 
-<section id="services">
-    <h2>Nos Services</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Analyse de marché</h3>
-            <p>Rapports détaillés sur les tendances et prévisions crypto.</p>
-        </div>
-        <div class="card">
-            <h3>Sécurité Blockchain</h3>
-            <p>Protection complète de vos actifs numériques.</p>
-        </div>
-        <div class="card">
-            <h3>Consultation personnalisée</h3>
-            <p>Accompagnement stratégique en investissement crypto.</p>
-        </div>
-    </div>
+<section id="formations">
+<h2>Nos Matières Crypto</h2>
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-bitcoin"></i>
+<h3>Introduction au Bitcoin</h3>
+<button onclick="toggleDetails('btc')">Voir les détails</button>
+<div class="details" id="btc">
+<ul>
+<li>Histoire du Bitcoin</li>
+<li>Fonctionnement de la Blockchain</li>
+<li>Création d’un Wallet</li>
+<li>Clés privées et sécurité</li>
+<li>Transactions et frais</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Analyse Technique</h3>
+<button onclick="toggleDetails('analyse')">Voir les détails</button>
+<div class="details" id="analyse">
+<ul>
+<li>Lecture des chandeliers japonais</li>
+<li>Supports & résistances</li>
+<li>RSI et MACD</li>
+<li>Moyennes mobiles</li>
+<li>Gestion du risque</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-coins"></i>
+<h3>Trading Crypto</h3>
+<button onclick="toggleDetails('trading')">Voir les détails</button>
+<div class="details" id="trading">
+<ul>
+<li>Spot trading</li>
+<li>Futures & levier</li>
+<li>Stratégies scalping & swing</li>
+<li>Psychologie du trader</li>
+<li>Plan de trading professionnel</li>
+</ul>
+</div>
+</div>
+
+</div>
 </section>
 
-<section id="enseignements">
-    <h2>Enseignements</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Introduction à la Cybersécurité</h3>
-            <p>Comprendre les bases des réseaux et des menaces numériques.</p>
-        </div>
-        <div class="card">
-            <h3>Analyse Crypto Avancée</h3>
-            <p>Maîtrisez les tendances et stratégies blockchain.</p>
-        </div>
-    </div>
-</section>
+<section class="premium" id="premium">
+<h2>Accès Premium</h2>
+<p>Accédez à toutes les formations complètes + stratégies avancées.</p>
+<p><strong>Prix : 5$ ou 15 000 FC</strong></p>
 
-<section id="premium">
-    <h2>Accès Premium</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Formation Complète Cybersécurité</h3>
-            <p>Contenus exclusifs, stratégies avancées et analyses privées.</p>
-            <a href="#" class="premium-btn">Accéder au Premium (10$)</a>
-        </div>
-    </div>
+<a href="https://wa.me/243834556840?text=Bonjour%20je%20veux%20payer%205$%20(15000FC)%20pour%20la%20formation%20Crypto%20Premium" target="_blank">
+<button>Payer via M-Pesa</button>
+</a>
+
+<a href="https://wa.me/243972840969?text=Bonjour%20je%20veux%20payer%205$%20(15000FC)%20pour%20la%20formation%20Crypto%20Premium" target="_blank">
+<button>Payer via Airtel Money</button>
+</a>
+
 </section>
 
 <section class="contact" id="contact">
-    <h2>Contactez-nous</h2>
-
-    <p>📞 Téléphone :
-        <a href="tel:+243972840969" style="color:#00f2ea;">
-            +243 972 840 969
-        </a>
-    </p>
-
-    <p>📧 Email :
-        <a href="mailto:Stevenwelle777@gmail.com" style="color:#00f2ea;">
-            Stevenwelle777@gmail.com
-        </a>
-    </p>
-
-    <br><br>
-
-    <form>
-        <input type="text" placeholder="Votre nom" required>
-        <input type="email" placeholder="Votre email" required>
-        <textarea rows="5" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
+<h2>Contact</h2>
+<p>📞 <a href="tel:+243972840969" style="color:#00f2ea;">Téléphone</a></p>
+<p>📧 <a href="mailto:Stevenwelle777@gmail.com" style="color:#00f2ea;">Email</a></p>
 </section>
 
 <footer>
-    &copy; 2026 Cryptovision-RDC - Tous droits réservés.
+&copy; 2026 Cryptovision-RDC - Formation Crypto
 </footer>
+
+<script>
+function toggleDetails(id){
+var element=document.getElementById(id);
+if(element.style.display==="block"){
+element.style.display="none";
+}else{
+element.style.display="block";
+}
+}
+</script>
 
 </body>
 </html>
