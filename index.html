@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cryptovision-RDC | Formation Crypto</title>
+<title>Cryptovision-RDC | Formation Crypto Premium</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
 body{background:#0d0d1a;color:#fff;scroll-behavior:smooth;}
@@ -16,21 +15,18 @@ header{background:rgba(10,10,30,0.95);padding:15px 0;position:fixed;width:100%;t
 header h1{color:#00f2ea;}
 nav ul{list-style:none;display:flex;gap:20px;}
 nav ul li a:hover{color:#00f2ea;}
-
 section{padding:120px 20px;text-align:center;}
 .hero{background:linear-gradient(135deg,#00f2ea,#6b00ff);position:relative;overflow:hidden;}
 .hero h2{margin-bottom:20px;font-size:3rem;animation:fadeInDown 1.5s ease forwards;}
 .hero p{font-size:1.2rem;max-width:700px;margin:auto;animation:fadeInUp 1.5s ease forwards;}
-
 @keyframes fadeInDown{0%{opacity:0;transform:translateY(-50px);}100%{opacity:1;transform:translateY(0);}}
 @keyframes fadeInUp{0%{opacity:0;transform:translateY(50px);}100%{opacity:1;transform:translateY(0);}}
-
 .cards{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:20px;}
 .card{background:#111133;padding:30px;width:320px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);}
 .card i{font-size:2rem;color:#00f2ea;margin-bottom:15px;}
 .card button{margin-top:15px;padding:10px 20px;border:none;background:#6b00ff;color:white;border-radius:6px;cursor:pointer;}
 .card button:hover{background:#4500b3;}
-.details{display:none;margin-top:15px;text-align:left;font-size:0.9rem;color:#ccc;}
+.details{display:none;margin-top:15px;text-align:left;font-size:0.9rem;color:#ccc;max-height:400px;overflow-y:auto;}
 .premium{background:#111133;padding:60px 20px;}
 .premium button{padding:15px 30px;background:#00f2ea;color:#000;border:none;border-radius:8px;font-weight:bold;cursor:pointer;margin:10px;}
 .contact{background:#111133;padding:60px 20px;}
@@ -69,45 +65,39 @@ button.submit:hover{background:#4500b3;}
 <div class="card">
 <i class="fa-solid fa-bitcoin"></i>
 <h3>Introduction au Bitcoin</h3>
-<button onclick="toggleDetails('btc')">Voir les matières</button>
+<button onclick="toggleDetails('btc')">Lire le cours</button>
 <div class="details" id="btc">
-<ul>
-<li>Histoire du Bitcoin</li>
-<li>Fonctionnement de la Blockchain</li>
-<li>Création d’un Wallet</li>
-<li>Clés privées et sécurité</li>
-<li>Transactions et frais</li>
-</ul>
+<p><strong>Histoire :</strong> Création de Bitcoin en 2009 par Satoshi Nakamoto, première cryptomonnaie décentralisée.</p>
+<p><strong>Blockchain :</strong> Chaîne de blocs sécurisée contenant toutes les transactions.</p>
+<p><strong>Wallet :</strong> Portefeuille pour stocker les Bitcoins. Clés publiques et privées.</p>
+<p><strong>Transactions :</strong> Chaque transaction est validée par le réseau. Frais variables selon rapidité.</p>
 </div>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-chart-line"></i>
 <h3>Analyse Technique</h3>
-<button onclick="toggleDetails('analyse')">Voir les matières</button>
+<button onclick="toggleDetails('analyse')">Lire le cours</button>
 <div class="details" id="analyse">
-<ul>
-<li>Lecture des chandeliers japonais</li>
-<li>Supports & résistances</li>
-<li>RSI et MACD</li>
-<li>Moyennes mobiles</li>
-<li>Gestion du risque</li>
-</ul>
+<p><strong>Chandeliers japonais :</strong> Graphiques montrant ouverture, fermeture, plus haut, plus bas.</p>
+<p><strong>Supports & résistances :</strong> Points clés où le prix rebondit ou rencontre résistance.</p>
+<p><strong>RSI :</strong> Indique surachat ou survente.</p>
+<p><strong>MACD :</strong> Identifie changements de tendance.</p>
+<p><strong>Moyennes mobiles :</strong> Suivi tendance générale.</p>
+<p><strong>Gestion du risque :</strong> Stop-loss, pourcentage du capital à risquer.</p>
 </div>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-coins"></i>
 <h3>Trading Crypto</h3>
-<button onclick="toggleDetails('trading')">Voir les matières</button>
+<button onclick="toggleDetails('trading')">Lire le cours</button>
 <div class="details" id="trading">
-<ul>
-<li>Spot trading</li>
-<li>Futures & levier</li>
-<li>Stratégies scalping & swing</li>
-<li>Psychologie du trader</li>
-<li>Plan de trading professionnel</li>
-</ul>
+<p><strong>Spot trading :</strong> Achat/vente immédiat.</p>
+<p><strong>Futures & levier :</strong> Spéculation avec effet de levier.</p>
+<p><strong>Stratégies :</strong> Scalping, Swing, Day trading.</p>
+<p><strong>Psychologie :</strong> Discipline et contrôle émotionnel.</p>
+<p><strong>Plan de trading :</strong> Objectifs, stop-loss, journalisation des trades.</p>
 </div>
 </div>
 
@@ -116,7 +106,7 @@ button.submit:hover{background:#4500b3;}
 
 <section class="premium" id="premium">
 <h2>Accès Premium</h2>
-<p>Accédez à toutes les formations complètes + stratégies avancées.</p>
+<p>Accédez à toutes les formations complètes + stratégies avancées + PDF design + certificat numérique.</p>
 <p><strong>Prix : 5$ ou 15 000 FC</strong></p>
 
 <div class="cards">
@@ -137,7 +127,7 @@ button.submit:hover{background:#4500b3;}
 </div>
 </div>
 
-<h3>Confirmer le paiement pour recevoir le lien premium et le certificat :</h3>
+<h3>Confirmer le paiement pour recevoir le PDF Premium + certificat :</h3>
 <form id="confirmationForm">
 <input type="text" placeholder="Votre nom complet" required>
 <input type="email" placeholder="Votre email" required>
@@ -154,19 +144,27 @@ button.submit:hover{background:#4500b3;}
 </section>
 
 <footer>
-&copy; 2026 Cryptovision-RDC - Formation Crypto
+&copy; 2026 Cryptovision-RDC - Formation Crypto Premium
 </footer>
 
 <script>
+// Toggle lecture des matières
 function toggleDetails(id){
 var element=document.getElementById(id);
 element.style.display=(element.style.display==="block")?"none":"block";
 }
 
-// Formulaire confirmation paiement
+// Formulaire confirmation paiement + envoi PDF via EmailJS
 document.getElementById("confirmationForm").addEventListener("submit", function(e){
 e.preventDefault();
-document.getElementById("confirmationMessage").innerText="Merci ! Nous allons vous envoyer le lien premium et le certificat par email très bientôt.";
+document.getElementById("confirmationMessage").innerHTML="Merci ! Vous recevrez le PDF premium et le certificat par email très bientôt.";
+
+let nom=this.querySelector('input[type=text]').value;
+let email=this.querySelector('input[type=email]').value;
+let paiement=this.querySelector('textarea').value;
+
+// EmailJS exemple : envoyer PDF hébergé
+// emailjs.send("service_id","template_id",{name: nom,email: email,paiement: paiement,pdf_link:"https://cryptovision-rdc.netlify.app/premium.pdf"});
 this.reset();
 });
 </script>
