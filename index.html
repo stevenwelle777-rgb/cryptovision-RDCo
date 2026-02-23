@@ -42,13 +42,62 @@
     .card h3 { margin-bottom:15px; color:#00f2ea; }
     .card p { font-size:1rem; line-height:1.6; color:#ccc; }
 
-    /* ==== Contact ==== */
-    section.contact { background-color:#111133; color:#fff; padding:100px 20px; text-align:center; }
-    section.contact h2 { margin-bottom:40px; color:#00f2ea; }
-    section.contact form { max-width:500px; margin:auto; display:flex; flex-direction:column; gap:20px; }
-    section.contact input, section.contact textarea { padding:15px; border-radius:8px; border:none; font-size:1rem; }
-    section.contact button { padding:15px; background-color:#6b00ff; border:none; color:#fff; font-weight:700; cursor:pointer; transition: background 0.3s; }
-    section.contact button:hover { background-color:#4500b3; }
+   <section class="services" id="enseignements">
+    <h2>Enseignements</h2>
+    <div class="service-cards">
+
+        <div class="card">
+            <h3>Introduction à la Cybersécurité</h3>
+            <p>Comprendre les bases des réseaux, des menaces et des systèmes sécurisés.</p>
+        </div>
+
+        <div class="card">
+            <h3>Analyse Crypto Avancée</h3>
+            <p>Apprenez à analyser les marchés et comprendre les tendances blockchain.</p>
+        </div>
+
+    </div>
+</section><li><a href="#premium">Premium</a></li><section class="services" id="premium">
+    <h2>Accès Premium</h2>
+
+    <div class="card" style="margin:auto;">
+        <h3>Formation Complète Cybersécurité</h3>
+        <p>Accédez à des contenus exclusifs, analyses privées et stratégies avancées.</p>
+
+        <a href="#"
+        style="display:inline-block;
+        margin-top:20px;
+        padding:15px 30px;
+        background:#6b00ff;
+        border-radius:8px;">
+        Accéder au Premium (10$)
+        </a>
+    </div>
+</section><!-- Contact -->
+<section class="contact" id="contact">
+    <h2>Contactez-nous</h2>
+
+    <div style="margin-bottom:40px;">
+        <p>📞 Téléphone :
+            <a href="tel:+243972840969" style="color:#00f2ea;">
+                +243 972 840 969
+            </a>
+        </p>
+
+        <p>📧 Email :
+            <a href="mailto:Stevenwelle777@gmail.com" style="color:#00f2ea;">
+                Stevenwelle777@gmail.com
+            </a>
+        </p>
+    </div>
+
+    <form>
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea rows="5" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
 
     /* ==== Footer ==== */
     footer { background-color:#000011; color:#aaa; text-align:center; padding:30px 20px; }
@@ -137,18 +186,6 @@
         navMenu.classList.toggle('show');
     });
 </script>
-<section id="contact" style="padding:40px; text-align:center; background-color:#0f172a; color:white;">
-    <h2>Contact</h2>
-    <p>📞 Téléphone : 
-        <a href="tel:+243972840969" style="color:#38bdf8; text-decoration:none;">
-            +243 972 840 969
-        </a>
-    </p>
-    <p>📧 Email : 
-        <a href="mailto:Stevenwelle777@gmail.com" style="color:#38bdf8; text-decoration:none;">
-            Stevenwelle777@gmail.com
-        </a>
-    </p>
-</section>
+
 </body>
 </html>
