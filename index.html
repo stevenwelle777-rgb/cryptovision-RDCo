@@ -190,8 +190,11 @@ function payer(){
   let users=JSON.parse(localStorage.getItem("users"))||[];
   users.push({nom:nom,email:email,actif:false});
   localStorage.setItem("users",JSON.stringify(users));
+
+  // ✅ Paiement WhatsApp Vodacom
   let message="Bonjour Cryptovision-RDC,%0AJe viens de payer via Vodacom M-Pesa.%0ANom:"+nom+"%0AEmail:"+email;
-  window.open("https://wa.me/243972840969?text="+message,'_blank');
+  window.open("https://wa.me/243834556840?text="+message,'_blank');
+
   alert("Demande enregistrée. Attendez validation.");
 }
 
