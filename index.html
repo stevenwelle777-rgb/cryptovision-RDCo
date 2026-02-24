@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cryptovision-RDC | Formation Crypto Premium</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
 body{background:#0d0d1a;color:#fff;scroll-behavior:smooth;}
@@ -23,14 +21,15 @@ section{padding:120px 20px;text-align:center;}
 .card{background:#111133;padding:30px;width:320px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);}
 .card button{margin-top:15px;padding:10px 20px;border:none;background:#6b00ff;color:white;border-radius:6px;cursor:pointer;}
 .card button:hover{background:#4500b3;}
-.details{display:none;margin-top:15px;text-align:left;color:#ccc;}
+.details{display:none;margin-top:15px;text-align:left;color:#ccc;max-height:400px;overflow-y:auto;}
 input{padding:10px;margin:5px;border:none;border-radius:6px;width:90%;}
 .hidden{display:none;}
 .admin{background:#220022;padding:20px;margin-top:40px;border-radius:15px;}
 footer{background:#000011;padding:30px;color:#aaa;}
+.contact-info{background:#111133;padding:40px;margin-top:40px;border-radius:15px;}
+.contact-info p a{color:#00f2ea;}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -42,6 +41,7 @@ footer{background:#000011;padding:30px;color:#aaa;}
 <li><a href="#formations">Formations</a></li>
 <li><a href="#premium">Premium</a></li>
 <li><a href="#membre">Espace Membre</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 </div>
@@ -49,36 +49,74 @@ footer{background:#000011;padding:30px;color:#aaa;}
 
 <section class="hero" id="about">
 <h2>Formation Professionnelle en Cryptomonnaies</h2>
-<p>Apprenez gratuitement les bases. Débloquez les PDF Premium pour aller plus loin.</p>
+<p>Apprenez gratuitement les bases avec des cours complets en ligne. Débloquez les PDF Premium pour aller plus loin.</p>
 </section>
 
-<!-- COURS GRATUITS -->
+<!-- COURS GRATUITS LONGS -->
 <section id="formations">
 <h2>Nos Cours Gratuits</h2>
-
 <div class="cards">
 
 <div class="card">
 <h3>Introduction au Bitcoin</h3>
-<button onclick="toggleDetails('btc')">Lire</button>
+<button onclick="toggleDetails('btc')">Lire le cours</button>
 <div class="details" id="btc">
-<p>Créé en 2009. Fonctionne avec la blockchain. Wallet public/privé. Transactions sécurisées.</p>
+<p><strong>Chapitre 1 :</strong> Histoire du Bitcoin</p>
+<p>Créé en 2009 par Satoshi Nakamoto, Bitcoin est la première cryptomonnaie décentralisée. Il permet des transactions sans intermédiaire bancaire.</p>
+
+<p><strong>Chapitre 2 :</strong> Fonctionnement Blockchain</p>
+<p>Chaque transaction est enregistrée dans un bloc et validée par le réseau. La blockchain est immuable et transparente.</p>
+
+<p><strong>Chapitre 3 :</strong> Wallet et sécurité</p>
+<p>Un wallet stocke vos Bitcoins. Clés publiques pour recevoir, clés privées pour envoyer. La sécurité repose sur la confidentialité des clés privées.</p>
+
+<p><strong>Chapitre 4 :</strong> Transactions et frais</p>
+<p>Les transactions sont confirmées par les mineurs. Les frais varient selon la rapidité de confirmation souhaitée.</p>
+
+<p><strong>Chapitre 5 :</strong> Avantages et risques</p>
+<p>Bitcoin offre liberté financière et décentralisation mais reste volatil. Il est essentiel de bien gérer le risque.</p>
+
+<p><strong>Version PDF Premium :</strong> <button onclick="checkPremium()">Télécharger PDF complet</button></p>
 </div>
 </div>
 
 <div class="card">
 <h3>Analyse Technique</h3>
-<button onclick="toggleDetails('analyse')">Lire</button>
+<button onclick="toggleDetails('analyse')">Lire le cours</button>
 <div class="details" id="analyse">
-<p>Chandeliers japonais, RSI, MACD, supports & résistances, gestion du risque.</p>
+<p><strong>Chapitre 1 :</strong> Chandeliers japonais</p>
+<p>Chaque chandelier indique ouverture, fermeture, plus haut et plus bas sur une période donnée.</p>
+
+<p><strong>Chapitre 2 :</strong> Supports et résistances</p>
+<p>Points où le prix a tendance à rebondir ou rencontrer des obstacles.</p>
+
+<p><strong>Chapitre 3 :</strong> Indicateurs RSI et MACD</p>
+<p>RSI indique surachat/survente. MACD identifie changements de tendance.</p>
+
+<p><strong>Chapitre 4 :</strong> Gestion du risque</p>
+<p>Stop-loss, taille de position, diversification, discipline et psychologie.</p>
+
+<p><strong>Version PDF Premium :</strong> <button onclick="checkPremium()">Télécharger PDF complet</button></p>
 </div>
 </div>
 
 <div class="card">
 <h3>Trading Crypto</h3>
-<button onclick="toggleDetails('trading')">Lire</button>
+<button onclick="toggleDetails('trading')">Lire le cours</button>
 <div class="details" id="trading">
-<p>Spot, Futures, psychologie du trader, plan de trading.</p>
+<p><strong>Chapitre 1 :</strong> Spot trading</p>
+<p>Achat et vente immédiate de cryptomonnaies sur le marché.</p>
+
+<p><strong>Chapitre 2 :</strong> Futures et levier</p>
+<p>Permet de spéculer avec effet de levier mais augmente le risque.</p>
+
+<p><strong>Chapitre 3 :</strong> Stratégies et plan de trading</p>
+<p>Scalping, swing, day trading. Établir objectifs, stop-loss, journaliser chaque trade.</p>
+
+<p><strong>Chapitre 4 :</strong> Psychologie</p>
+<p>Discipline, contrôle émotionnel et patience sont clés pour réussir.</p>
+
+<p><strong>Version PDF Premium :</strong> <button onclick="checkPremium()">Télécharger PDF complet</button></p>
 </div>
 </div>
 
@@ -87,7 +125,7 @@ footer{background:#000011;padding:30px;color:#aaa;}
 
 <!-- PAIEMENT -->
 <section id="premium">
-<h2>Accès Premium (PDF téléchargeables)</h2>
+<h2>Accès Premium (PDF)</h2>
 <p><strong>Prix : 5$ ou 15 000 FC</strong></p>
 
 <div class="card" style="margin:auto;">
@@ -100,9 +138,7 @@ footer{background:#000011;padding:30px;color:#aaa;}
 <!-- ESPACE MEMBRE -->
 <section id="membre">
 <h2>Connexion Membre Premium</h2>
-
-<input type="email" id="loginEmail" placeholder="Votre email">
-<br>
+<input type="email" id="loginEmail" placeholder="Votre email"><br>
 <button onclick="connexion()">Se connecter</button>
 <p id="loginMessage"></p>
 
@@ -118,7 +154,6 @@ footer{background:#000011;padding:30px;color:#aaa;}
 <h2>🔒 Admin</h2>
 <input type="password" id="adminPass" placeholder="Mot de passe admin">
 <button onclick="ouvrirAdmin()">Ouvrir</button>
-
 <div id="adminPanel" class="hidden">
 <h3>Utilisateurs en attente :</h3>
 <div id="listeUsers"></div>
@@ -127,79 +162,61 @@ footer{background:#000011;padding:30px;color:#aaa;}
 
 </section>
 
+<!-- CONTACT / SERVICE CLIENT -->
+<section id="contact" class="contact-info">
+<h2>Service Client / Contact Admin</h2>
+<p>📞 <a href="tel:+243834556840">+243 83 455 6840</a></p>
+<p>📧 <a href="mailto:stevenwelle777@gmail.com">stevenwelle777@gmail.com</a></p>
+</section>
+
 <footer>
 © 2026 Cryptovision-RDC - Formation Crypto Premium
 </footer>
 
 <script>
-
 function toggleDetails(id){
 var e=document.getElementById(id);
 e.style.display=(e.style.display==="block")?"none":"block";
 }
 
+function checkPremium(){
+alert("🔒 Ce PDF est réservé aux membres Premium. Connectez-vous après paiement.");
+}
+
 function payer(){
 let nom=document.getElementById("nom").value;
 let email=document.getElementById("email").value;
-
-if(nom===""||email===""){
-alert("Remplissez les champs");
-return;
-}
-
+if(nom===""||email===""){alert("Remplissez les champs");return;}
 let users=JSON.parse(localStorage.getItem("users"))||[];
 users.push({nom:nom,email:email,actif:false});
 localStorage.setItem("users",JSON.stringify(users));
-
 let message="Bonjour Cryptovision-RDC,%0AJe viens de payer via Vodacom M-Pesa.%0ANom:"+nom+"%0AEmail:"+email;
 window.open("https://wa.me/243972840969?text="+message,'_blank');
-
-alert("Demande enregistrée. Attendez activation.");
+alert("Demande enregistrée. Attendez validation.");
 }
 
 function connexion(){
 let email=document.getElementById("loginEmail").value;
 let users=JSON.parse(localStorage.getItem("users"))||[];
 let user=users.find(u=>u.email===email);
-
-if(!user){
-document.getElementById("loginMessage").innerText="Utilisateur non trouvé.";
-return;
-}
-
+if(!user){document.getElementById("loginMessage").innerText="Utilisateur non trouvé.";return;}
 if(user.actif){
 document.getElementById("premiumContent").classList.remove("hidden");
 document.getElementById("loginMessage").innerText="Accès autorisé.";
-}else{
-document.getElementById("loginMessage").innerText="En attente de validation.";
-}
+}else{document.getElementById("loginMessage").innerText="En attente de validation.";}
 }
 
 function ouvrirAdmin(){
 let pass=document.getElementById("adminPass").value;
-
-if(pass==="ADMIN2026"){
-document.getElementById("adminPanel").classList.remove("hidden");
-afficherUsers();
-}else{
-alert("Mot de passe incorrect");
-}
+if(pass==="ADMIN2026"){document.getElementById("adminPanel").classList.remove("hidden");afficherUsers();}
+else{alert("Mot de passe incorrect");}
 }
 
 function afficherUsers(){
 let users=JSON.parse(localStorage.getItem("users"))||[];
 let liste=document.getElementById("listeUsers");
 liste.innerHTML="";
-
-users.forEach((u,index)=>{
-if(!u.actif){
-liste.innerHTML+=`
-<p>${u.nom} - ${u.email}
-<button onclick="valider(${index})">Valider</button>
-</p>
-`;
-}
-});
+users.forEach((u,index)=>{if(!u.actif){liste.innerHTML+=`<p>${u.nom} - ${u.email} <button onclick="valider(${index})">Valider</button></p>`;}});
 }
 
 function valider(index){
@@ -209,7 +226,6 @@ localStorage.setItem("users",JSON.stringify(users));
 afficherUsers();
 alert("Utilisateur activé !");
 }
-
 </script>
 
 </body>
