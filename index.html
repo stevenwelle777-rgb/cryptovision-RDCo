@@ -3,175 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cryptovision-RDC | Formation Crypto Premium</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Cryptovision-RDC</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{background:#0d0d1a;color:#fff;scroll-behavior:smooth;}
-a{text-decoration:none;color:inherit;}
-header{background:rgba(10,10,30,0.95);padding:15px 0;position:fixed;width:100%;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,0.5);}
-.container{width:90%;max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;}
-header h1{color:#00f2ea;font-size:1.8rem;}
-nav ul{list-style:none;display:flex;gap:20px;}
-nav ul li a:hover{color:#00f2ea;}
-section{padding:120px 20px;text-align:center;}
-.hero{background:linear-gradient(135deg,#00f2ea,#6b00ff);position:relative;overflow:hidden;}
-.hero h2{margin-bottom:20px;font-size:3rem;animation:fadeInDown 1.5s ease forwards;}
-.hero p{font-size:1.2rem;max-width:700px;margin:auto;animation:fadeInUp 1.5s ease forwards;}
-@keyframes fadeInDown{0%{opacity:0;transform:translateY(-50px);}100%{opacity:1;transform:translateY(0);}}
-@keyframes fadeInUp{0%{opacity:0;transform:translateY(50px);}100%{opacity:1;transform:translateY(0);}}
-.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:20px;}
-.card{background:#111133;padding:30px;width:320px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,0.5);text-align:center;}
-.card i{font-size:2rem;color:#00f2ea;margin-bottom:15px;}
-.card button{margin-top:15px;padding:10px 20px;border:none;background:#6b00ff;color:white;border-radius:6px;cursor:pointer;}
-.card button:hover{background:#4500b3;}
-.details{display:none;margin-top:15px;text-align:left;font-size:0.9rem;color:#ccc;max-height:400px;overflow-y:auto;}
-.premium{background:#111133;padding:60px 20px;}
-.premium button{padding:15px 30px;background:#00f2ea;color:#000;border:none;border-radius:8px;font-weight:bold;cursor:pointer;margin:10px;}
-.contact{background:#111133;padding:60px 20px;}
-footer{background:#000011;padding:30px;color:#aaa;}
-form{display:flex;flex-direction:column;gap:15px;max-width:400px;margin:auto;}
-input,textarea{padding:12px;border-radius:6px;border:none;font-size:1rem;}
-button.submit{background:#6b00ff;color:#fff;padding:12px;border-radius:6px;border:none;font-weight:bold;cursor:pointer;}
-button.submit:hover{background:#4500b3;}
+body{font-family:Arial;background:#0d0d1a;color:white;text-align:center;padding:20px}
+input{padding:10px;margin:5px;border:none;border-radius:5px}
+button{padding:10px 20px;background:#6b00ff;color:white;border:none;border-radius:5px;cursor:pointer}
+button:hover{background:#4500b3}
+.card{background:#111133;padding:20px;border-radius:10px;margin:20px auto;width:300px}
+.hidden{display:none}
+.admin{background:#220022;padding:20px;margin-top:40px}
 </style>
 </head>
+
 <body>
 
-<header>
-<div class="container">
-<h1>Cryptovision-RDC</h1>
-<nav>
-<ul>
-<li><a href="#about">À propos</a></li>
-<li><a href="#formations">Formations</a></li>
-<li><a href="#premium">Premium</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</div>
-</header>
-
-<section class="hero" id="about">
-<h2>Formation Professionnelle en Cryptomonnaies</h2>
-<p>Apprenez à investir, analyser et comprendre le marché crypto en RDC.</p>
-</section>
-
-<section id="formations">
-<h2>Nos Matières Crypto</h2>
-<div class="cards">
+<h1>Cryptovision-RDC Premium</h1>
+<p>Prix : 5$ ou 15000 FC</p>
 
 <div class="card">
-<i class="fa-solid fa-bitcoin"></i>
-<h3>Introduction au Bitcoin</h3>
-<button onclick="toggleDetails('btc')">Lire le cours</button>
-<div class="details" id="btc">
-<p><strong>Histoire :</strong> Création de Bitcoin en 2009 par Satoshi Nakamoto, première cryptomonnaie décentralisée.</p>
-<p><strong>Blockchain :</strong> Chaîne de blocs sécurisée contenant toutes les transactions.</p>
-<p><strong>Wallet :</strong> Portefeuille pour stocker les Bitcoins. Clés publiques et privées.</p>
-<p><strong>Transactions :</strong> Chaque transaction est validée par le réseau. Frais variables selon rapidité.</p>
-</div>
+<h3>Paiement Vodacom M-Pesa</h3>
+
+<input type="text" id="nom" placeholder="Nom complet">
+<input type="email" id="email" placeholder="Email">
+
+<br>
+<button onclick="payer()">Confirmer via WhatsApp</button>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-chart-line"></i>
-<h3>Analyse Technique</h3>
-<button onclick="toggleDetails('analyse')">Lire le cours</button>
-<div class="details" id="analyse">
-<p><strong>Chandeliers japonais :</strong> Graphiques montrant ouverture, fermeture, plus haut, plus bas.</p>
-<p><strong>Supports & résistances :</strong> Points clés où le prix rebondit ou rencontre résistance.</p>
-<p><strong>RSI :</strong> Indique surachat ou survente.</p>
-<p><strong>MACD :</strong> Identifie changements de tendance.</p>
-<p><strong>Moyennes mobiles :</strong> Suivi tendance générale.</p>
-<p><strong>Gestion du risque :</strong> Stop-loss, pourcentage du capital à risquer.</p>
-</div>
+<h3>Connexion Membre</h3>
+<input type="email" id="loginEmail" placeholder="Votre email">
+<br>
+<button onclick="connexion()">Se connecter</button>
+<p id="loginMessage"></p>
 </div>
 
-<div class="card">
-<i class="fa-solid fa-coins"></i>
-<h3>Trading Crypto</h3>
-<button onclick="toggleDetails('trading')">Lire le cours</button>
-<div class="details" id="trading">
-<p><strong>Spot trading :</strong> Achat/vente immédiat.</p>
-<p><strong>Futures & levier :</strong> Spéculation avec effet de levier.</p>
-<p><strong>Stratégies :</strong> Scalping, Swing, Day trading.</p>
-<p><strong>Psychologie :</strong> Discipline et contrôle émotionnel.</p>
-<p><strong>Plan de trading :</strong> Objectifs, stop-loss, journalisation des trades.</p>
-</div>
+<div id="premiumContent" class="hidden">
+<h2>Bienvenue Premium 🔐</h2>
+<a href="formation-premium.pdf" download>
+<button>Télécharger la formation</button>
+</a>
 </div>
 
-</div>
-</section>
+<hr>
 
-<section class="premium" id="premium">
-<h2>Accès Premium</h2>
-<p>Accédez à toutes les formations complètes + stratégies avancées + PDF design + certificat numérique.</p>
-<p><strong>Prix : 5$ ou 15 000 FC</strong></p>
+<div class="admin">
+<h2>🔒 Espace Admin</h2>
+<input type="password" id="adminPass" placeholder="Mot de passe admin">
+<button onclick="ouvrirAdmin()">Ouvrir</button>
 
-<div class="cards">
-<div class="card">
-<h3>Paiement M-Pesa</h3>
-<p>Sécurisé et rapide</p>
-<a href="#" onclick="pay('mpesa')"><button>Payer via M-Pesa</button></a>
-</div>
-
-<div class="card">
-<h3>Paiement Airtel Money</h3>
-<p>Sécurisé et rapide</p>
-<a href="#" onclick="pay('airtel')"><button>Payer via Airtel Money</button></a>
+<div id="adminPanel" class="hidden">
+<h3>Utilisateurs en attente :</h3>
+<div id="listeUsers"></div>
 </div>
 </div>
-
-<h3>Confirmer le paiement pour recevoir le PDF Premium + certificat :</h3>
-<form id="confirmationForm">
-<input type="text" placeholder="Votre nom complet" required>
-<input type="email" placeholder="Votre email" required>
-<textarea rows="3" placeholder="Précisez le type de paiement effectué (M-Pesa/Airtel)" required></textarea>
-<button type="submit" class="submit">Envoyer</button>
-</form>
-<p id="confirmationMessage" style="color:#00f2ea;margin-top:10px;"></p>
-</section>
-
-<section class="contact" id="contact">
-<h2>Contact</h2>
-<p>📞 <a href="tel:+243972840969" style="color:#00f2ea;">Téléphone</a></p>
-<p>📧 <a href="mailto:Stevenwelle777@gmail.com" style="color:#00f2ea;">Email</a></p>
-</section>
-
-<footer>
-&copy; 2026 Cryptovision-RDC - Formation Crypto Premium
-</footer>
 
 <script>
-// Afficher / cacher détails cours
-function toggleDetails(id){
-  var element=document.getElementById(id);
-  element.style.display=(element.style.display==="block")?"none":"block";
+
+function payer(){
+let nom=document.getElementById("nom").value;
+let email=document.getElementById("email").value;
+
+if(nom===""||email===""){
+alert("Remplissez les champs");
+return;
 }
 
-// Simuler paiement M-Pesa / Airtel API
-function pay(method){
-  alert("Redirection vers le paiement sécurisé " + method + ".\nSi tu veux le réel, tu dois intégrer l'API M-Pesa/Airtel Money Business.");
+let users=JSON.parse(localStorage.getItem("users"))||[];
+
+users.push({nom:nom,email:email,actif:false});
+
+localStorage.setItem("users",JSON.stringify(users));
+
+let message="Bonjour Cryptovision-RDC,%0AJe viens de payer via Vodacom M-Pesa.%0ANom:"+nom+"%0AEmail:"+email;
+window.open("https://wa.me/243972840969?text="+message,'_blank');
+
+alert("Votre demande est enregistrée. Attendez activation.");
 }
 
-// Formulaire confirmation paiement → appelle Netlify Function
-document.getElementById('confirmationForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const nom=this.querySelector('input[type=text]').value;
-  const email=this.querySelector('input[type=email]').value;
-  const paiement=this.querySelector('textarea').value;
+function connexion(){
+let email=document.getElementById("loginEmail").value;
+let users=JSON.parse(localStorage.getItem("users"))||[];
 
-  fetch('/.netlify/functions/paymentWebhook',{
-    method:'POST',
-    body:JSON.stringify({name:nom,email:email,paiement:paiement}),
-    headers:{'Content-Type':'application/json'}
-  }).then(res=>res.json())
-    .then(data=>{
-      document.getElementById('confirmationMessage').innerText=data.message;
-      this.reset();
-    });
+let user=users.find(u=>u.email===email);
+
+if(!user){
+document.getElementById("loginMessage").innerText="Utilisateur non trouvé.";
+return;
+}
+
+if(user.actif){
+document.getElementById("premiumContent").classList.remove("hidden");
+document.getElementById("loginMessage").innerText="Accès autorisé.";
+}else{
+document.getElementById("loginMessage").innerText="En attente de validation.";
+}
+}
+
+function ouvrirAdmin(){
+let pass=document.getElementById("adminPass").value;
+
+if(pass==="ADMIN2026"){
+document.getElementById("adminPanel").classList.remove("hidden");
+afficherUsers();
+}else{
+alert("Mot de passe incorrect");
+}
+}
+
+function afficherUsers(){
+let users=JSON.parse(localStorage.getItem("users"))||[];
+let liste=document.getElementById("listeUsers");
+liste.innerHTML="";
+
+users.forEach((u,index)=>{
+if(!u.actif){
+liste.innerHTML+=`
+<p>${u.nom} - ${u.email}
+<button onclick="valider(${index})">Valider</button>
+</p>
+`;
+}
 });
+}
+
+function valider(index){
+let users=JSON.parse(localStorage.getItem("users"))||[];
+users[index].actif=true;
+localStorage.setItem("users",JSON.stringify(users));
+afficherUsers();
+alert("Utilisateur activé !");
+}
+
 </script>
 
 </body>
