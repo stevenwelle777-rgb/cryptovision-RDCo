@@ -24,7 +24,6 @@ section{padding:120px 20px;text-align:center;}
 .details{display:none;margin-top:15px;text-align:left;color:#ccc;max-height:400px;overflow-y:auto;}
 input{padding:10px;margin:5px;border:none;border-radius:6px;width:90%;}
 .hidden{display:none;}
-.admin{background:#220022;padding:20px;margin-top:40px;border-radius:15px;}
 footer{background:#000011;padding:30px;color:#aaa;}
 .contact-info{background:#111133;padding:40px;margin-top:40px;border-radius:15px;}
 .contact-info p a{color:#00f2ea;}
@@ -149,16 +148,17 @@ footer{background:#000011;padding:30px;color:#aaa;}
 <a href="trading-premium.pdf" download><button>PDF Trading</button></a>
 </div>
 
-<!-- ADMIN -->
-<div class="admin">
+<!-- ADMIN SÉCURISÉ -->
+<section id="adminSection">
 <h2>🔒 Admin</h2>
 <input type="password" id="adminPass" placeholder="Mot de passe admin">
-<button onclick="ouvrirAdmin()">Ouvrir</button>
+<button onclick="ouvrirAdmin()">Se connecter</button>
+
 <div id="adminPanel" class="hidden">
 <h3>Utilisateurs en attente :</h3>
 <div id="listeUsers"></div>
 </div>
-</div>
+</section>
 
 </section>
 
@@ -175,56 +175,69 @@ footer{background:#000011;padding:30px;color:#aaa;}
 
 <script>
 function toggleDetails(id){
-var e=document.getElementById(id);
-e.style.display=(e.style.display==="block")?"none":"block";
+  var e=document.getElementById(id);
+  e.style.display=(e.style.display==="block")?"none":"block";
 }
 
 function checkPremium(){
-alert("🔒 Ce PDF est réservé aux membres Premium. Connectez-vous après paiement.");
+  alert("🔒 Ce PDF est réservé aux membres Premium. Connectez-vous après paiement.");
 }
 
 function payer(){
-let nom=document.getElementById("nom").value;
-let email=document.getElementById("email").value;
-if(nom===""||email===""){alert("Remplissez les champs");return;}
-let users=JSON.parse(localStorage.getItem("users"))||[];
-users.push({nom:nom,email:email,actif:false});
-localStorage.setItem("users",JSON.stringify(users));
-let message="Bonjour Cryptovision-RDC,%0AJe viens de payer via Vodacom M-Pesa.%0ANom:"+nom+"%0AEmail:"+email;
-window.open("https://wa.me/243972840969?text="+message,'_blank');
-alert("Demande enregistrée. Attendez validation.");
+  let nom=document.getElementById("nom").value;
+  let email=document.getElementById("email").value;
+  if(nom===""||email===""){alert("Remplissez les champs");return;}
+  let users=JSON.parse(localStorage.getItem("users"))||[];
+  users.push({nom:nom,email:email,actif:false});
+  localStorage.setItem("users",JSON.stringify(users));
+  let message="Bonjour Cryptovision-RDC,%0AJe viens de payer via Vodacom M-Pesa.%0ANom:"+nom+"%0AEmail:"+email;
+  window.open("https://wa.me/243972840969?text="+message,'_blank');
+  alert("Demande enregistrée. Attendez validation.");
 }
 
 function connexion(){
-let email=document.getElementById("loginEmail").value;
-let users=JSON.parse(localStorage.getItem("users"))||[];
-let user=users.find(u=>u.email===email);
-if(!user){document.getElementById("loginMessage").innerText="Utilisateur non trouvé.";return;}
-if(user.actif){
-document.getElementById("premiumContent").classList.remove("hidden");
-document.getElementById("loginMessage").innerText="Accès autorisé.";
-}else{document.getElementById("loginMessage").innerText="En attente de validation.";}
+  let email=document.getElementById("loginEmail").value;
+  let users=JSON.parse(localStorage.getItem("users"))||[];
+  let user=users.find(u=>u.email===email);
+  if(!user){document.getElementById("loginMessage").innerText="Utilisateur non trouvé.";return;}
+  if(user.actif){
+    document.getElementById("premiumContent").classList.remove("hidden");
+    document.getElementById("loginMessage").innerText="Accès autorisé.";
+  }else{
+    document.getElementById("loginMessage").innerText="En attente de validation.";
+  }
 }
 
+// ADMIN SÉCURISÉ
+document.getElementById('adminPanel').style.display="none";
+
 function ouvrirAdmin(){
-let pass=document.getElementById("adminPass").value;
-if(pass==="ADMIN2026"){document.getElementById("adminPanel").classList.remove("hidden");afficherUsers();}
-else{alert("Mot de passe incorrect");}
+  let pass=document.getElementById("adminPass").value;
+  if(pass==="ADMIN2026"){
+    document.getElementById("adminPanel").style.display="block";
+    afficherUsers();
+  }else{
+    alert("Mot de passe incorrect");
+  }
 }
 
 function afficherUsers(){
-let users=JSON.parse(localStorage.getItem("users"))||[];
-let liste=document.getElementById("listeUsers");
-liste.innerHTML="";
-users.forEach((u,index)=>{if(!u.actif){liste.innerHTML+=`<p>${u.nom} - ${u.email} <button onclick="valider(${index})">Valider</button></p>`;}});
+  let users=JSON.parse(localStorage.getItem("users"))||[];
+  let liste=document.getElementById("listeUsers");
+  liste.innerHTML="";
+  users.forEach((u,index)=>{
+    if(!u.actif){
+      liste.innerHTML+=`<p>${u.nom} - ${u.email} <button onclick="valider(${index})">Valider</button></p>`;
+    }
+  });
 }
 
 function valider(index){
-let users=JSON.parse(localStorage.getItem("users"))||[];
-users[index].actif=true;
-localStorage.setItem("users",JSON.stringify(users));
-afficherUsers();
-alert("Utilisateur activé !");
+  let users=JSON.parse(localStorage.getItem("users"))||[];
+  users[index].actif=true;
+  localStorage.setItem("users",JSON.stringify(users));
+  afficherUsers();
+  alert("Utilisateur activé !");
 }
 </script>
 
